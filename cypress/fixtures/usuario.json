@@ -1,0 +1,28 @@
+{
+  "usuario_sem_news": {
+    "genero": "male",
+    "nome": "Diego",
+    "sobrenome": "Wilkinson",
+    "diaNascimento": 3,
+    "mesNascimento": 11,
+    "anoNascimento": "1969",
+    "email": "Durward.Pfeffer@hotmail.com",
+    "nomeEmpresa": "Blick and Sons",
+    "newsletter": "uncheck",
+    "senha": "6JIskBJXUmcYcKu",
+    "confirmarSenha": "6JIskBJXUmcYcKu"
+  },
+  "usuario_com_news": {
+    "genero": "male",
+    "nome": "Gennaro",
+    "sobrenome": "Fadel",
+    "diaNascimento": 3,
+    "mesNascimento": 11,
+    "anoNascimento": "1969",
+    "email": "Kyle78@hotmail.com",
+    "nomeEmpresa": "Willms, Cassin and Hettinger",
+    "newsletter": "check",
+    "senha": "6JIskBJXUmcYcKu",
+    "confirmarSenha": "6JIskBJXUmcYcKu"
+  }
+}
