@@ -1,6 +1,7 @@
 {
   "extends": "standard",
   "rules": {
-    "semi": [1, "always"]
+    "semi": [1, "always"],
+    "max-len": [0, 80, 2, { "ignoreUrls": true }]
   }
 }
