@@ -18,6 +18,19 @@ describe("Registar usuario", () => {
     cy.url().should("eq", "https://demo.nopcommerce.com/");
   });
 
+  it.only("partindo da tela de login com dados validos", () => {
+    cy.navegarParaLogin();
+    cy.navegarDeLoginParaCadastro();
+
+    cy.readFile("cypress/fixtures/usuario.json").then((data) => {
+      cy.registrar(data.usuario_valido);
+    });
+
+    cy.validarRegistro();
+
+    cy.url().should("eq", "https://demo.nopcommerce.com/");
+  });
+
   it("com dados requeridos vazios", () => {
     const CAMPOS_REQUERIDOS = [
       "FirstName",
