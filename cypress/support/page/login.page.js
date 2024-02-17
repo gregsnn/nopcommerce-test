@@ -5,3 +5,7 @@ const inputEmail = "input#Email";
 const inputSenha = "input#Password";
 const inputLembrarUsuario = "input#RememberMe";
 const linkEsqueceuSenha = "form[method='post'] a";
+
+Cypress.Commands.add("navegarDeLoginParaCadastro", () => {
+  cy.get(botaoRegistrar).click();
+});

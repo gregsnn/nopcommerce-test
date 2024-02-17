@@ -1,4 +1,6 @@
-const inputGenero = "input#gender";
+import { formatarSeletor } from "../../utils/formatador";
+
+const inputGenero = "input#gender-*";
 const inputPrimeiroNome = "input#FirstName";
 const inputSobrenome = "input#LastName";
 const selecionarDiaNascimento = "select[name='DateOfBirthDay']";
@@ -14,11 +16,10 @@ const validacaoDeRegistro =
   "body > div.master-wrapper-page > div.master-wrapper-content > div > div > div > div.page-body > div.result";
 const botaoContinuarParaHome =
   "body > div.master-wrapper-page > div.master-wrapper-content > div > div > div > div.page-body > div.buttons > a";
+const textoErroFormulario = "form[method='post']  ul > li";
+const inputErro = "#*-error";
 
-const selecionarGenero = (generoChar) => {
-  return `${inputGenero}-${generoChar}`;
-};
-
+// ACOES
 Cypress.Commands.add("registrar", (usuario) => {
   const {
     genero,
@@ -34,7 +35,7 @@ Cypress.Commands.add("registrar", (usuario) => {
     confirmarSenha,
   } = usuario;
 
-  cy.get(selecionarGenero(genero)).click();
+  cy.get(formatarSeletor(inputGenero, genero)).click();
   cy.get(inputPrimeiroNome).type(nome);
   cy.get(inputSobrenome).type(sobrenome);
   cy.get(selecionarDiaNascimento).select(diaNascimento);
@@ -48,10 +49,47 @@ Cypress.Commands.add("registrar", (usuario) => {
   cy.get(botaoRegistrar).click();
 });
 
+Cypress.Commands.add("registrarDadosVazios", () => {
+  cy.get(botaoRegistrar).click();
+});
+
+// VALIDACAO
 Cypress.Commands.add("validarRegistro", () => {
   cy.get(validacaoDeRegistro).should(
     "have.text",
     "Your registration completed",
   );
   cy.get(botaoContinuarParaHome).click();
+});
+
+Cypress.Commands.add("validarRegistroDadosVazios", (campo) => {
+  cy.get(formatarSeletor(inputErro, campo)).should(
+    "contain.text",
+    "is required.",
+  );
+});
+
+Cypress.Commands.add("validarRegistroComEmailInvalido", () => {
+  cy.get(textoErroFormulario).should("have.text", "Wrong email");
+});
+
+Cypress.Commands.add("validarRegistroComEmailRepetido", () => {
+  cy.get(textoErroFormulario).should(
+    "have.text",
+    "The specified email already exists",
+  );
+});
+
+Cypress.Commands.add("validarRegistroComSenhaInvalida", () => {
+  cy.get(formatarSeletor(inputErro, "Password")).should(
+    "have.text",
+    "Password must meet the following rules: must have at least 6 characters",
+  );
+});
+
+Cypress.Commands.add("validarRegistroComSenhasNaoIguais", () => {
+  cy.get(formatarSeletor(inputErro, "ConfirmPassword")).should(
+    "have.text",
+    "The password and confirmation password do not match.",
+  );
 });
