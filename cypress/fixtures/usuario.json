@@ -1,28 +1,67 @@
 {
-  "usuario_sem_news": {
+  "usuario_valido": {
     "genero": "male",
-    "nome": "Diego",
-    "sobrenome": "Wilkinson",
+    "nome": "Alvah",
+    "sobrenome": "Anderson",
     "diaNascimento": 3,
     "mesNascimento": 11,
     "anoNascimento": "1969",
-    "email": "Durward.Pfeffer@hotmail.com",
-    "nomeEmpresa": "Blick and Sons",
-    "newsletter": "uncheck",
-    "senha": "6JIskBJXUmcYcKu",
-    "confirmarSenha": "6JIskBJXUmcYcKu"
-  },
-  "usuario_com_news": {
-    "genero": "male",
-    "nome": "Gennaro",
-    "sobrenome": "Fadel",
-    "diaNascimento": 3,
-    "mesNascimento": 11,
-    "anoNascimento": "1969",
-    "email": "Kyle78@hotmail.com",
-    "nomeEmpresa": "Willms, Cassin and Hettinger",
+    "email": "Jovanny79@gmail.com",
+    "nomeEmpresa": "Williamson - Ruecker",
     "newsletter": "check",
-    "senha": "6JIskBJXUmcYcKu",
-    "confirmarSenha": "6JIskBJXUmcYcKu"
+    "senha": "SxQbvCqcZ72leAG",
+    "confirmarSenha": "SxQbvCqcZ72leAG"
+  },
+  "usuario_email_invalido": {
+    "genero": "male",
+    "nome": "Ivory",
+    "sobrenome": "Koch",
+    "diaNascimento": 3,
+    "mesNascimento": 11,
+    "anoNascimento": "1969",
+    "email": "email@invalido",
+    "nomeEmpresa": "Friesen - Anderson",
+    "newsletter": "check",
+    "senha": "SxQbvCqcZ72leAG",
+    "confirmarSenha": "SxQbvCqcZ72leAG"
+  },
+  "usuario_email_repetido": {
+    "genero": "male",
+    "nome": "Martine",
+    "sobrenome": "Bode",
+    "diaNascimento": 3,
+    "mesNascimento": 11,
+    "anoNascimento": "1969",
+    "email": "js@gmail.com",
+    "nomeEmpresa": "Schroeder, Nienow and Witting",
+    "newsletter": "uncheck",
+    "senha": "SxQbvCqcZ72leAG",
+    "confirmarSenha": "SxQbvCqcZ72leAG"
+  },
+  "usuario_senha_invalida": {
+    "genero": "female",
+    "nome": "Jace",
+    "sobrenome": "Ledner",
+    "diaNascimento": 3,
+    "mesNascimento": 11,
+    "anoNascimento": "1969",
+    "email": "Wiley13@gmail.com",
+    "nomeEmpresa": "Schumm, Braun and Kuhic",
+    "newsletter": "check",
+    "senha": "123",
+    "confirmarSenha": "SxQbvCqcZ72leAG"
+  },
+  "usuario_senhas_nao_iguais": {
+    "genero": "male",
+    "nome": "Shanie",
+    "sobrenome": "Orn",
+    "diaNascimento": 3,
+    "mesNascimento": 11,
+    "anoNascimento": "1969",
+    "email": "Loy_Kertzmann13@yahoo.com",
+    "nomeEmpresa": "Windler Inc",
+    "newsletter": "uncheck",
+    "senha": "abc123",
+    "confirmarSenha": "123abc"
   }
 }
