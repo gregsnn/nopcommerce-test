@@ -1,11 +1,20 @@
 {
   "usuario_valido": {
+<<<<<<< Updated upstream
     "email": "Quinten.Willms3@hotmail.com",
     "senha": "DN1oYSnGyFGnkMk",
     "lembrarUsuario": "uncheck"
   },
   "usuario_invalido": {
     "email": "Quinten.Willms3@hotmail.com",
+=======
+    "email": "Sven71@yahoo.com",
+    "senha": "MPjTTctuVADwch2",
+    "lembrarUsuario": "uncheck"
+  },
+  "usuario_invalido": {
+    "email": "Sven71@yahoo.com",
+>>>>>>> Stashed changes
     "senha": "senha_invalida",
     "lembrarUsuario": "check"
   }
