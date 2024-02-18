@@ -1,5 +1,6 @@
 const botaoRegistrar = ".button-1.register-button";
 const botaoLogar = ".button-1.login-button";
+const botaoCheckoutComoConvidado = ".button-1.checkout-as-guest-button";
 
 const inputEmail = "input#Email";
 const inputSenha = "input#Password";
@@ -8,6 +9,10 @@ const linkEsqueceuSenha = "form[method='post'] a";
 
 Cypress.Commands.add("navegarDeLoginParaCadastro", () => {
   cy.get(botaoRegistrar).click();
+});
+
+Cypress.Commands.add("navegarParaCheckoutComoConvidado", () => {
+  cy.get(botaoCheckoutComoConvidado).click();
 });
 
 Cypress.Commands.add("logar", (usuario) => {
@@ -27,5 +32,52 @@ Cypress.Commands.add("setupLogin", () => {
   cy.readFile("cypress/fixtures/registro.json").then((data) => {
     cy.registrar(data.usuario_valido);
     cy.gerarDadosLogin(data.usuario_valido);
+  });
+});
+
+Cypress.Commands.add("setupCheckoutComEndereco", () => {
+  cy.gerarDadosRegistro();
+
+  cy.navegarParaRegistro();
+
+  cy.readFile("cypress/fixtures/registro.json").then((data) => {
+    cy.registrar(data.usuario_valido);
+    cy.gerarDadosLogin(data.usuario_valido);
+    cy.gerarDadosEndereco(data.usuario_valido);
+  });
+
+  cy.navegarParaLogin();
+
+  cy.readFile("cypress/fixtures/login.json").then((data) => {
+    cy.logar(data.usuario_valido);
+  });
+
+  cy.navegarParaMinhaConta();
+
+  cy.navegarParaMenuEndereco();
+
+  cy.wait(1000);
+  cy.entrarEmTelaDeAdicionarEndereco();
+
+  cy.readFile("cypress/fixtures/endereco.json").then((data) => {
+    cy.preencherEndereco(data.endereco_valido);
+  });
+});
+
+Cypress.Commands.add("setupCheckoutSemEndereco", () => {
+  cy.gerarDadosRegistro();
+
+  cy.navegarParaRegistro();
+
+  cy.readFile("cypress/fixtures/registro.json").then((data) => {
+    cy.registrar(data.usuario_valido);
+    cy.gerarDadosLogin(data.usuario_valido);
+    cy.gerarDadosEndereco(data.usuario_valido);
+  });
+
+  cy.navegarParaLogin();
+
+  cy.readFile("cypress/fixtures/login.json").then((data) => {
+    cy.logar(data.usuario_valido);
   });
 });
