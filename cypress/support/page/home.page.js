@@ -45,3 +45,10 @@ Cypress.Commands.add("validarDeslogado", () => {
   cy.get(botaoRegistro).should("exist");
   cy.get(botaoLogin).should("exist");
 });
+
+Cypress.Commands.add("validarLogado", () => {
+  cy.get(botaoDeslogar).should("exist");
+  cy.get(botaoMinhaConta).should("exist");
+  cy.get(botaoRegistro).should("not.exist");
+  cy.get(botaoLogin).should("not.exist");
+});

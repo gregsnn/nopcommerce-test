@@ -1,7 +1,12 @@
 {
   "usuario_valido": {
-    "email": "Stephanie.Hauck@hotmail.com",
-    "senha": "KTfxwvcjJnGsz0N",
+    "email": "Chelsie.Mayer43@yahoo.com",
+    "senha": "tveR2Mf1tbhycgc",
+    "lembrarUsuario": "uncheck"
+  },
+  "usuario_invalido": {
+    "email": "Chelsie.Mayer43@yahoo.com",
+    "senha": "senha_invalida",
     "lembrarUsuario": "check"
   }
 }

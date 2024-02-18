@@ -31,6 +31,10 @@ Cypress.Commands.add("gerarDadosLogin", (usuarioRegistrado) => {
     usuario_valido: {
       ...login(usuarioRegistrado),
     },
+    usuario_invalido: {
+      ...login(usuarioRegistrado),
+      senha: "senha_invalida",
+    },
   });
 });
 
