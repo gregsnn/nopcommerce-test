@@ -16,7 +16,7 @@ Cypress.Commands.add("navegarParaHome", () => {
 });
 
 Cypress.Commands.add("navegarParaLogin", () => {
-  cy.get(botaoLogin).click();
+  cy.wait(500).get(botaoLogin).click();
 });
 
 Cypress.Commands.add("navegarParaMinhaConta", () => {
