@@ -1,7 +1,12 @@
 {
   "usuario_valido": {
-    "email": "Mustafa.VonRueden26@gmail.com",
-    "senha": "K7lGDRJbxEthhiw",
+    "email": "Chelsie.Mayer43@yahoo.com",
+    "senha": "tveR2Mf1tbhycgc",
+    "lembrarUsuario": "uncheck"
+  },
+  "usuario_invalido": {
+    "email": "Chelsie.Mayer43@yahoo.com",
+    "senha": "senha_invalida",
     "lembrarUsuario": "check"
   }
 }
