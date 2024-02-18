@@ -50,7 +50,7 @@ describe("Adicionar produto no carrinho", () => {
     cy.navegarParaPaginaDoProduto(2);
 
     cy.adicionarProdutos(quantidadeProdutos);
-    cy.validarErroEndereco(menssageDeErro);
+    cy.validarErro(menssageDeErro);
   });
 
   it("um produto com quantidade acima de 10000", () => {
