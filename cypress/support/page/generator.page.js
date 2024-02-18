@@ -1,26 +1,34 @@
-import { usuario } from "../../utils/base.usuario";
+import { login, registro } from "../../utils/base.usuario";
 
 Cypress.Commands.add("gerarDadosRegistro", () => {
-  cy.writeFile("cypress/fixtures/usuario.json", {
+  cy.writeFile("cypress/fixtures/registro.json", {
     usuario_valido: {
-      ...usuario(),
+      ...registro(),
     },
     usuario_email_invalido: {
-      ...usuario(),
+      ...registro(),
       email: "email@invalido",
     },
     usuario_email_repetido: {
-      ...usuario(),
+      ...registro(),
       email: "js@gmail.com",
     },
     usuario_senha_invalida: {
-      ...usuario(),
+      ...registro(),
       senha: "123",
     },
     usuario_senhas_nao_iguais: {
-      ...usuario(),
+      ...registro(),
       senha: "abc123",
       confirmarSenha: "123abc",
+    },
+  });
+});
+
+Cypress.Commands.add("gerarDadosLogin", (usuarioRegistrado) => {
+  cy.writeFile("cypress/fixtures/login.json", {
+    usuario_valido: {
+      ...login(usuarioRegistrado),
     },
   });
 });

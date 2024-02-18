@@ -9,7 +9,7 @@ describe("Registar usuario", () => {
   it("com dados validos", () => {
     cy.navegarParaRegistro();
 
-    cy.readFile("cypress/fixtures/usuario.json").then((data) => {
+    cy.readFile("cypress/fixtures/registro.json").then((data) => {
       cy.registrar(data.usuario_valido);
     });
 
@@ -18,11 +18,11 @@ describe("Registar usuario", () => {
     cy.url().should("eq", "https://demo.nopcommerce.com/");
   });
 
-  it.only("partindo da tela de login com dados validos", () => {
+  it("partindo da tela de login com dados validos", () => {
     cy.navegarParaLogin();
     cy.navegarDeLoginParaCadastro();
 
-    cy.readFile("cypress/fixtures/usuario.json").then((data) => {
+    cy.readFile("cypress/fixtures/registro.json").then((data) => {
       cy.registrar(data.usuario_valido);
     });
 
@@ -52,7 +52,7 @@ describe("Registar usuario", () => {
   it("com email invalido", () => {
     cy.navegarParaRegistro();
 
-    cy.readFile("cypress/fixtures/usuario.json").then((data) => {
+    cy.readFile("cypress/fixtures/registro.json").then((data) => {
       cy.registrar(data.usuario_email_invalido);
     });
 
@@ -62,7 +62,7 @@ describe("Registar usuario", () => {
   it("com email repetido", () => {
     cy.navegarParaRegistro();
 
-    cy.readFile("cypress/fixtures/usuario.json").then((data) => {
+    cy.readFile("cypress/fixtures/registro.json").then((data) => {
       cy.registrar(data.usuario_email_repetido);
     });
 
@@ -72,7 +72,7 @@ describe("Registar usuario", () => {
   it("com senha invalida", () => {
     cy.navegarParaRegistro();
 
-    cy.readFile("cypress/fixtures/usuario.json").then((data) => {
+    cy.readFile("cypress/fixtures/registro.json").then((data) => {
       cy.registrar(data.usuario_senha_invalida);
     });
 
@@ -82,7 +82,7 @@ describe("Registar usuario", () => {
   it("com senhas nao iguais", () => {
     cy.navegarParaRegistro();
 
-    cy.readFile("cypress/fixtures/usuario.json").then((data) => {
+    cy.readFile("cypress/fixtures/registro.json").then((data) => {
       cy.registrar(data.usuario_senhas_nao_iguais);
     });
 
