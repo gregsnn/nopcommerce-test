@@ -6,3 +6,5 @@ export * from "./listaDesejos.page";
 export * from "./login.page";
 export * from "./minhaConta.page";
 export * from "./registrar.page";
+export * from './categoria.page';
+export * from "./produto.page";
