@@ -1,12 +1,12 @@
 {
   "usuario_valido": {
-    "email": "Chelsie.Mayer43@yahoo.com",
-    "senha": "tveR2Mf1tbhycgc",
+    "email": "Cristian.Lebsack82@hotmail.com",
+    "senha": "uayoS7_DnHmEQXK",
     "lembrarUsuario": "uncheck"
   },
   "usuario_invalido": {
-    "email": "Chelsie.Mayer43@yahoo.com",
+    "email": "Cristian.Lebsack82@hotmail.com",
     "senha": "senha_invalida",
-    "lembrarUsuario": "check"
+    "lembrarUsuario": "uncheck"
   }
 }
