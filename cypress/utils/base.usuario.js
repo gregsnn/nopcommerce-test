@@ -1,4 +1,5 @@
 import faker from "@faker-js/faker";
+import { random } from "./formatador";
 
 const OPCOES_CHECKBOX = ["check", "uncheck"];
 const OPCOES_GENERO = ["male", "female"];
@@ -32,8 +33,4 @@ export const login = (usuarioRegistrado) => {
     senha,
     lembrarUsuario: random(OPCOES_CHECKBOX),
   };
-};
-
-const random = (array) => {
-  return array[Math.floor(Math.random() * array.length)];
 };

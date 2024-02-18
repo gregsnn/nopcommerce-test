@@ -1,3 +1,4 @@
+import { endereco } from "../../utils/base.endereco";
 import { login, registro } from "../../utils/base.usuario";
 
 Cypress.Commands.add("gerarDadosRegistro", () => {
@@ -33,6 +34,27 @@ Cypress.Commands.add("gerarDadosLogin", (usuarioRegistrado) => {
     usuario_invalido: {
       ...login(usuarioRegistrado),
       senha: "senha_invalida",
+    },
+  });
+});
+
+Cypress.Commands.add("gerarDadosEndereco", (usuarioRegistrado) => {
+  if (!usuarioRegistrado) {
+    usuarioRegistrado = {
+      ...registro(),
+    };
+  }
+
+  cy.writeFile("cypress/fixtures/endereco.json", {
+    endereco_valido: {
+      ...endereco(),
+      nome: usuarioRegistrado.nome,
+      sobrenome: usuarioRegistrado.sobrenome,
+      email: usuarioRegistrado.email,
+      nomeEmpresa: usuarioRegistrado.nomeEmpresa,
+    },
+    endereco_valido_completo: {
+      ...endereco(),
     },
   });
 });
