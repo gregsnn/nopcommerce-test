@@ -1,0 +1,12 @@
+{
+  "usuario_valido": {
+    "email": "Quinten.Willms3@hotmail.com",
+    "senha": "DN1oYSnGyFGnkMk",
+    "lembrarUsuario": "uncheck"
+  },
+  "usuario_invalido": {
+    "email": "Quinten.Willms3@hotmail.com",
+    "senha": "MPjTTctuVADwch2",
+    "lembrarUsuario": "uncheck"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "endereco_valido": {
+    "nome": "Braeden",
+    "sobrenome": "Fisher",
+    "email": "Quinten.Willms3@hotmail.com",
+    "nomeEmpresa": "Dickens, Huels and Greenholt",
+    "pais": "United States",
+    "estado": "California",
+    "cidade": "East Brittanyton",
+    "endereco": "08097 Corrine Run",
+    "segundoEndereco": "Apt. 294",
+    "codigoPostal": "16674",
+    "numeroCelular": "(372) 385-9854",
+    "numeroFax": "953.770.6895"
+  },
+  "endereco_valido_completo": {
+    "nome": "Trisha",
+    "sobrenome": "Stanton",
+    "email": "Maegan.Kilback52@hotmail.com",
+    "nomeEmpresa": "McKenzie LLC",
+    "pais": "United States",
+    "estado": "California",
+    "cidade": "Fort Arvel",
+    "endereco": "8843 Francesca Key",
+    "segundoEndereco": "Apt. 867",
+    "codigoPostal": "36586",
+    "numeroCelular": "972-761-7527",
+    "numeroFax": "267-500-8810 x562"
+  }
+}

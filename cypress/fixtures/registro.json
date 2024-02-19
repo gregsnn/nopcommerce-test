@@ -1,0 +1,67 @@
+{
+  "usuario_valido": {
+    "genero": "male",
+    "nome": "Braeden",
+    "sobrenome": "Fisher",
+    "diaNascimento": 25,
+    "mesNascimento": 3,
+    "anoNascimento": "1927",
+    "email": "Quinten.Willms3@hotmail.com",
+    "nomeEmpresa": "Dickens, Huels and Greenholt",
+    "newsletter": "uncheck",
+    "senha": "DN1oYSnGyFGnkMk",
+    "confirmarSenha": "DN1oYSnGyFGnkMk"
+  },
+  "usuario_email_invalido": {
+    "genero": "male",
+    "nome": "Damaris",
+    "sobrenome": "Corkery",
+    "diaNascimento": 1,
+    "mesNascimento": 8,
+    "anoNascimento": "1961",
+    "email": "email@invalido",
+    "nomeEmpresa": "Gottlieb and Sons",
+    "newsletter": "check",
+    "senha": "DaOb6jyJm3bw7uD",
+    "confirmarSenha": "DaOb6jyJm3bw7uD"
+  },
+  "usuario_email_repetido": {
+    "genero": "male",
+    "nome": "Shea",
+    "sobrenome": "Von",
+    "diaNascimento": 8,
+    "mesNascimento": 4,
+    "anoNascimento": "2022",
+    "email": "js@gmail.com",
+    "nomeEmpresa": "Flatley - Beer",
+    "newsletter": "uncheck",
+    "senha": "VnrWOG8hF73RWsm",
+    "confirmarSenha": "VnrWOG8hF73RWsm"
+  },
+  "usuario_senha_invalida": {
+    "genero": "male",
+    "nome": "Rico",
+    "sobrenome": "Hartmann",
+    "diaNascimento": 7,
+    "mesNascimento": 6,
+    "anoNascimento": "1935",
+    "email": "Enoch_Ebert@hotmail.com",
+    "nomeEmpresa": "Wintheiser - Torp",
+    "newsletter": "uncheck",
+    "senha": "123",
+    "confirmarSenha": "ESE3L_KcZwB4Dc6"
+  },
+  "usuario_senhas_nao_iguais": {
+    "genero": "female",
+    "nome": "Ernesto",
+    "sobrenome": "Lind",
+    "diaNascimento": 13,
+    "mesNascimento": 8,
+    "anoNascimento": "1980",
+    "email": "Nick71@yahoo.com",
+    "nomeEmpresa": "Bednar - Lind",
+    "newsletter": "uncheck",
+    "senha": "abc123",
+    "confirmarSenha": "123abc"
+  }
+}
