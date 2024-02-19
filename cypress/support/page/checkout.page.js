@@ -93,6 +93,8 @@ Cypress.Commands.add("fluxoDeCompraComoConvidado", (produto) => {
 });
 
 Cypress.Commands.add("fluxoDeCompraSemRegistro", (produto) => {
+  cy.gerarDadosRegistro();
+
   cy.get(termsCheckbox).click();
   cy.get(btnCheckout).click();
 
