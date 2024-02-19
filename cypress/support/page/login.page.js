@@ -6,6 +6,10 @@ const inputEmail = "input#Email";
 const inputSenha = "input#Password";
 const inputLembrarUsuario = "input#RememberMe";
 const linkEsqueceuSenha = "form[method='post'] a";
+const inputEmailRecuperarSenha = "#Email";
+const btnRecuperar = "body > div.master-wrapper-page > div.master-wrapper-content > div > div > div > div.page-body > form > div.buttons > button";
+const menssagemRecuperarSenha = "#bar-notification > div > p";
+
 
 const campoErro = "#Email-error";
 const mensagemErroLogin =
@@ -97,3 +101,17 @@ Cypress.Commands.add("setupCheckoutSemEndereco", () => {
     cy.logar(data.usuario_valido);
   });
 });
+
+Cypress.Commands.add("navegarParaRecuperaçãoDeSenha", () => {
+  cy.get(linkEsqueceuSenha).click();
+});
+
+Cypress.Commands.add("recuperarSenha", (email) => {
+  cy.get(inputEmailRecuperarSenha).type(email);
+  cy.wait(500).get(btnRecuperar).click();
+});
+
+Cypress.Commands.add("validarRecuperacaoDeSenha", (mensagem) => {
+  cy.get(menssagemRecuperarSenha).should("have.text", mensagem);
+});
+ 
