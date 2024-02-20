@@ -19,3 +19,7 @@ Cypress.Commands.add("validarAdicaoDeProduto", (quantidadeTotalEsperada, quantid
     expect(items.length).to.be.equal(quantidadeItensEsperada)
   })
 })
+
+Cypress.Commands.add("clicarEmCheckout", () => {
+  cy.get(produtos.btnIrParaCheckout).click()
+});
