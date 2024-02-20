@@ -54,6 +54,6 @@ describe('Registro de usuário', () => {
     cy.setarQuantidade(100000)
     cy.clicarAdicionarProduto()
 
-    cy.validarErroPaginaDeProduto("There are not enough products in stock.\n0")
+    cy.validarErroPaginaDeProduto("There are not enough products in stock.\n")
   })
 })
