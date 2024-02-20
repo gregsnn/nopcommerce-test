@@ -7,3 +7,7 @@ Cypress.Commands.add("clicarIrParaEmLogin", () => {
 Cypress.Commands.add("clicarEmDeslogar", () => {
   cy.get(home.btnDeslogar).click()
 })
+
+Cypress.Commands.add("clicarCategoriaWomen", () => {
+  cy.get(home.btnCategoriaWomen).click()
+})

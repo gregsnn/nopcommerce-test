@@ -4,4 +4,5 @@ export default {
   btnLinkParaContactUs: "#contact-link",
   btnPaginaInicial: "#center_column > ul > li > a > span",
   btnLinkMinhaConta: "#header > div.nav > div > div > nav > div:nth-child(1) > a > span",
+  btnCategoriaWomen: "#block_top_menu > ul > li:nth-child(1) > a"
 }
