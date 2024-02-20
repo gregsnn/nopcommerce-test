@@ -4,5 +4,5 @@ export default {
   btnLogin: "#SubmitLogin > span",
   btnCriarConta: "#SubmitCreate > span",
   campoEmailCriarConta: "#email_create",
-  errorMessageSelector: "#center_column > div.alert.alert-danger > ol > li",
+  menssagemDeErroCriarConta: "#create_account_error > ol > li",
 }
