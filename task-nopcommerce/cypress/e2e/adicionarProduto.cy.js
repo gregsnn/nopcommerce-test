@@ -9,7 +9,6 @@ describe("Adicionar produto no carrinho", () => {
     const variedadeProdutos = 1;
     const quantidadeProdutos = 1;
 
-
     cy.navegarParaCategoriaLivros();
 
     cy.adicionarAoCarrinho(1);
