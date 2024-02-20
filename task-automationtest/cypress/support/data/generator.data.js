@@ -1,9 +1,9 @@
-import cadastro from "./cadastro"
-
+import geraCadastro from "./cadastro"
+ 
 Cypress.Commands.add("gerarDadosCadastro", () => {
   cy.writeFile("cypress/fixtures/registro.json", {
     usuarioValido: {
-      ...cadastro
+      ...geraCadastro()
     }
   })
 })
